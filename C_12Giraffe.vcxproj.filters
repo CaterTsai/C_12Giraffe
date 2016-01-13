@@ -40,6 +40,12 @@
     <ClCompile Include="src\GJetPack.cpp">
       <Filter>src\12Giraffe</Filter>
     </ClCompile>
+    <ClCompile Include="src\colorMgr.cpp">
+      <Filter>src\ColorMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TGiraffe.cpp">
+      <Filter>src\TGiraffe</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -65,6 +71,12 @@
     </Filter>
     <Filter Include="src\12Giraffe\DrawElement">
       <UniqueIdentifier>{708c1e43-fb8d-418e-ad1e-3c01623d9e52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ColorMgr">
+      <UniqueIdentifier>{1e64a622-37dc-4c64-ae9e-92d2db457e11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\TGiraffe">
+      <UniqueIdentifier>{50eab6a5-7248-4be3-bcf4-b7d5f4603d4a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +154,12 @@
     </ClInclude>
     <ClInclude Include="src\GJetPack.h">
       <Filter>src\12Giraffe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\colorMgr.h">
+      <Filter>src\ColorMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TGiraffe.h">
+      <Filter>src\TGiraffe</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -5,17 +5,20 @@
 void ofApp::setup()
 {
 	ofEnableSmoothing();
+	ofSetCircleResolution(30);
 	ofBackground(255);
 
+	colorMgr::GetInstance();
 	drawMgr::GetInstance();
 
 	//Setup giraffe
 	initialGiraffe();
 
+	//Debug
 	//_p.drawPos.set(ofGetWidth()/2, ofGetHeight()/2);
-
-
-
+	//_p.fsize = _p.fsize * 1000;
+	//_p.offsetPos.set(_p.fsize * 0.05, 0.4 * _p.fsize);
+	
 	_fMainTimer = ofGetElapsedTimef();
 }
 
@@ -33,6 +36,7 @@ void ofApp::update()
 		}
 	}
 
+	_tGiraffe.update(fDelta_);
 	ofSetWindowTitle(ofToString(ofGetFrameRate()));
 }
 
@@ -47,8 +51,20 @@ void ofApp::draw()
 		}
 	}
 
+	_tGiraffe.draw();
+
 	//Debug
 	//drawMgr::GetInstance()->draw(_p);
+
+	//ofSetColor(255, 0, 0);
+	//ofLine(ofVec2f(0, ofGetHeight()/2), ofVec2f(ofGetWidth(), ofGetHeight()/2));
+}
+
+//--------------------------------------------------------------
+void ofApp::exit()
+{
+	drawMgr::Destroy();
+	colorMgr::Destroy();
 }
 
 //--------------------------------------------------------------
@@ -76,6 +92,18 @@ void ofApp::keyPressed(int key)
 			_GMap[NAME_MGR::G_JETPACK]->add(0, 0);
 		}
 		break;
+	case '1':
+		{
+			if(!_tGiraffe.isTransform())
+			{	
+				resetGiraffe();
+				colorMgr::GetInstance()->changeColor();
+
+				_tGiraffe.transform();
+				ofBackground(colorMgr::GetInstance()->getBackColor());
+			}
+		}
+		break;
 	}
 }
 #pragma endregion
@@ -96,6 +124,15 @@ void ofApp::initialGiraffe()
 
 	auto pJetpack_ = ofPtr<GJetpack>(new GJetpack(1.5));
 	_GMap.insert(make_pair(NAME_MGR::G_JETPACK, pJetpack_));
+}
+
+//--------------------------------------------------------------
+void ofApp::resetGiraffe()
+{
+	for(auto& Iter_ : _GMap)
+	{
+		Iter_.second->reset();
+	}
 }
 #pragma endregion
 

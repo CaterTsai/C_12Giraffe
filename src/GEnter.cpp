@@ -6,6 +6,8 @@ EnterUnit::EnterUnit(float fduration, int iside)
 	:_eUnitState(eState_Enter)
 	,_swingDegree(-30)
 {
+	_Giraffe.linecolor = colorMgr::GetInstance()->getForeColor();
+	_Giraffe.fillcolor = colorMgr::GetInstance()->getBackColor();
 	_Giraffe.bFill = true;
 	_Giraffe.fsize = ofGetHeight() * 1.4;
 	_Giraffe.tongueL = _Giraffe.fsize * 0.1;

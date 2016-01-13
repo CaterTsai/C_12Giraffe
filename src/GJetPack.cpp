@@ -17,11 +17,15 @@ JetpackUnit::JetpackUnit(float fduration)
 	ofVec2f up_(0, -1);
 	_fneckDegree = up_.angle(neck_);
 
+	_Giraffe.linecolor = colorMgr::GetInstance()->getForeColor();
+	_Giraffe.fillcolor = colorMgr::GetInstance()->getBackColor();
 	_Giraffe.fsize = fsize_;
 	_Giraffe.fdegree = -_fneckDegree;
 	_Giraffe.tongueL = _Giraffe.fsize * 0.1;
 	_Giraffe.drawPos = startPos_;
 
+	_Jetpack.linecolor = colorMgr::GetInstance()->getForeColor();
+	_Jetpack.fillcolor = colorMgr::GetInstance()->getBackColor();
 	_Jetpack.fsize = fsize_ * 0.5;
 	_Jetpack.fBeltLength = fsize_ * 0.25;
 	_Jetpack.drawPos = startPos_;

@@ -16,11 +16,18 @@ JumpUnit::JumpUnit(float fduration)
 	
 	_animHeight.animateFromTo(0, _fHeight);
 
+	_Giraffe.linecolor = colorMgr::GetInstance()->getForeColor();
+	_Giraffe.fillcolor = colorMgr::GetInstance()->getBackColor();
+
 	_Giraffe.drawPos.set(ofRandomWidth(), 0);
 	_Giraffe.fdegree = ofRandom(0, 359);
 	_fDegree = _Giraffe.fdegree;
 
 	//Firework
+	_Firework.levelColor[0] = colorMgr::GetInstance()->getForeColor();
+	_Firework.levelColor[1] = colorMgr::GetInstance()->getForeColor();
+	_Firework.levelColor[2] = colorMgr::GetInstance()->getForeColor();
+
 	_Firework.drawPos.set(_Giraffe.drawPos.x, ofGetHeight() - _fHeight);
 	_Firework.fdegree = _fDegree;
 	_Firework.levelNum[0] = 1;

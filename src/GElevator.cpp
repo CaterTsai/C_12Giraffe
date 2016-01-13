@@ -11,11 +11,15 @@ ElevatorUnit::ElevatorUnit(float fduration)
 		,ofRandom(ofGetHeight() * 0.1, ofGetHeight() * 0.9)
 	);
 
-	float fsize_ = ofRandom(150, 280);
+	float fsize_ = ofRandom(100, 170);
 	
+	_Elevator.linecolor = colorMgr::GetInstance()->getForeColor();
+	_Elevator.fillcolor = colorMgr::GetInstance()->getBackColor();
 	_Elevator.drawPos = drawPos_;
 	_Elevator.fsize = fsize_;
 
+	_Giraffe.linecolor = colorMgr::GetInstance()->getForeColor();
+	_Giraffe.fillcolor = colorMgr::GetInstance()->getBackColor();
 	_Giraffe.bFill = true;
 	_Giraffe.fsize = fsize_ * 0.6;
 	_Giraffe.tongueL = _Giraffe.fsize * 0.1;
