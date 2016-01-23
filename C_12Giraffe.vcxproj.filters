@@ -203,6 +203,9 @@
     <ClInclude Include="src\GKirby.h">
       <Filter>src\12Giraffe</Filter>
     </ClInclude>
+    <ClInclude Include="src\DECactus.h">
+      <Filter>src\12Giraffe\DrawElement</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

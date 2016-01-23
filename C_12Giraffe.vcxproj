@@ -117,6 +117,7 @@
     <ClInclude Include="src\constParameter.h" />
     <ClInclude Include="src\DEBasic.h" />
     <ClInclude Include="src\DEBox.h" />
+    <ClInclude Include="src\DECactus.h" />
     <ClInclude Include="src\DEElevator.h" />
     <ClInclude Include="src\DEExclamationMark.h" />
     <ClInclude Include="src\DEFireFlower.h" />

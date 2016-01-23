@@ -61,10 +61,18 @@ void drawMgr::draw(stStarP& param)
 }
 
 //--------------------------------------------------------------
+void drawMgr::draw(stCactusP& param)
+{
+	DECacuts::draw(param);
+}
+
+//--------------------------------------------------------------
 void drawMgr::draw(stExclamationMarkP& param)
 {
 	DEExclamation::draw(param);
 }
+
+
 
 #pragma region Singleton
 //--------------------------------------------------------------

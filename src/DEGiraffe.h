@@ -10,7 +10,6 @@ public:
 	{
 		ofPath outline_;
 		CreateOutline(outline_, param);
-		
 		beginDraw(param);
 		{
 			ofSetColor(255);

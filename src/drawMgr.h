@@ -15,6 +15,7 @@
 #include "DEPipe.h"
 #include "DEFireFlower.h"
 #include "DEStar.h"
+#include "DECactus.h"
 
 class drawMgr
 {
@@ -30,6 +31,7 @@ public:
 	void draw(stPipeP& param);
 	void draw(stFireFlowerP& param);
 	void draw(stStarP& param);
+	void draw(stCactusP& param);
 
 	void draw(stExclamationMarkP& param);
 //-------------------

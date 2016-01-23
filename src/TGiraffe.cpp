@@ -16,6 +16,7 @@ void TGiraffe::update(float fDelta)
 	{
 		return;
 	}
+	_Giraffe.drawPos.set(ofGetWidth()/2, ofGetHeight()/2);
 	_animScale.update(fDelta);
 	_animRotate.update(fDelta);
 	switch(_eState)

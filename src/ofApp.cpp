@@ -16,8 +16,6 @@ void ofApp::setup()
 
 	//Debug
 	_p.drawPos.set(ofGetWidth()/2, ofGetHeight()/2);
-	_p.InRadiusRate = 0.65;
-
 
 	_fMainTimer = ofGetElapsedTimef();
 }
@@ -54,11 +52,10 @@ void ofApp::draw()
 	_tGiraffe.draw();
 
 	//Debug
-	//drawMgr::GetInstance()->draw(_p);
-
-	//ofSetColor(255, 0, 0);
-	//ofLine(ofVec2f(0, ofGetHeight()/2), ofVec2f(ofGetWidth(), ofGetHeight()/2));
-	//ofLine(ofVec2f(ofGetWidth()/2, 0), ofVec2f(ofGetWidth()/2, ofGetHeight()));
+	drawMgr::GetInstance()->draw(_p);
+	ofSetColor(255, 0, 0);
+	ofLine(ofVec2f(0, ofGetHeight()/2), ofVec2f(ofGetWidth(), ofGetHeight()/2));
+	ofLine(ofVec2f(ofGetWidth()/2, 0), ofVec2f(ofGetWidth()/2, ofGetHeight()));
 }
 
 //--------------------------------------------------------------

@@ -17,7 +17,7 @@ public:
 		
 private:
 	float _fMainTimer;
-	stStarP	_p;
+	stCactusP	_p;
 
 #pragma region Giraffe12
 //--------------------------------------

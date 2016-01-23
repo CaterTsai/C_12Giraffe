@@ -185,6 +185,19 @@ typedef struct _stStarP : public stBasicP, public stBasicColorP
 }stStarP;
 #pragma endregion
 
+#pragma region Cactus
+typedef struct _stCactusP : public stBasicP, public stBasicColorP
+{
+	_stCactusP()
+		:stBasicP()
+		,stBasicColorP()
+		,bLeftHandUp(true)
+	{};
+
+	bool bLeftHandUp;
+}stCactusP;
+#pragma endregion
+
 
 //-----------------------------------
 
