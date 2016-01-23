@@ -15,10 +15,10 @@ void ofApp::setup()
 	initialGiraffe();
 
 	//Debug
-	//_p.drawPos.set(ofGetWidth()/2, ofGetHeight()/2);
-	//_p.fsize = _p.fsize * 1000;
-	//_p.offsetPos.set(_p.fsize * 0.05, 0.4 * _p.fsize);
-	
+	_p.drawPos.set(ofGetWidth()/2, ofGetHeight()/2);
+	_p.InRadiusRate = 0.65;
+
+
 	_fMainTimer = ofGetElapsedTimef();
 }
 
@@ -58,6 +58,7 @@ void ofApp::draw()
 
 	//ofSetColor(255, 0, 0);
 	//ofLine(ofVec2f(0, ofGetHeight()/2), ofVec2f(ofGetWidth(), ofGetHeight()/2));
+	//ofLine(ofVec2f(ofGetWidth()/2, 0), ofVec2f(ofGetWidth()/2, ofGetHeight()));
 }
 
 //--------------------------------------------------------------
@@ -92,6 +93,31 @@ void ofApp::keyPressed(int key)
 			_GMap[NAME_MGR::G_JETPACK]->add(0, 0);
 		}
 		break;
+	case 't':
+		{
+			_GMap[NAME_MGR::G_DROP]->add(0, 0);
+		}
+		break;
+	case 'y':
+		{
+			_GMap[NAME_MGR::G_TRAVERSE]->add(0, 0);
+		}
+		break;
+	case 'u':
+		{
+			_GMap[NAME_MGR::G_MEGA]->add(0, 0);
+		}
+		break;
+	case 'i':
+		{
+			_GMap[NAME_MGR::G_MARIO]->add(0, 0);
+		}
+		break;
+	case 'o':
+		{
+			_GMap[NAME_MGR::G_KIRBY]->add(0, 0);
+		}
+		break;
 	case '1':
 		{
 			if(!_tGiraffe.isTransform())
@@ -124,6 +150,21 @@ void ofApp::initialGiraffe()
 
 	auto pJetpack_ = ofPtr<GJetpack>(new GJetpack(1.5));
 	_GMap.insert(make_pair(NAME_MGR::G_JETPACK, pJetpack_));
+
+	auto pDrop_ = ofPtr<GDrop>(new GDrop(1.5));
+	_GMap.insert(make_pair(NAME_MGR::G_DROP, pDrop_));
+
+	auto pTraverse_ = ofPtr<GTraverse>(new GTraverse(1.5));
+	_GMap.insert(make_pair(NAME_MGR::G_TRAVERSE, pTraverse_));
+
+	auto pMega_ = ofPtr<GMega>(new GMega(1.5));
+	_GMap.insert(make_pair(NAME_MGR::G_MEGA, pMega_));
+
+	auto pMario_ = ofPtr<GMario>(new GMario(1.5));
+	_GMap.insert(make_pair(NAME_MGR::G_MARIO, pMario_));
+
+	auto pKirby_ = ofPtr<GKirby>(new GKirby(1.5));
+	_GMap.insert(make_pair(NAME_MGR::G_KIRBY, pKirby_));
 }
 
 //--------------------------------------------------------------
@@ -135,4 +176,3 @@ void ofApp::resetGiraffe()
 	}
 }
 #pragma endregion
-

@@ -5,6 +5,7 @@ ElevatorUnit::ElevatorUnit(float fduration)
 	:_fWaitTime(fduration * 0.3)
 	,_eUnitState(eState_Up)
 	,_bShowGiraffe(false)
+	,_bHaveBox(ofRandom(-1, 1) >= 0)
 {
 	ofVec2f drawPos_(
 		ofRandom(ofGetWidth() * 0.1, ofGetWidth() * 0.9)
@@ -25,9 +26,17 @@ ElevatorUnit::ElevatorUnit(float fduration)
 	_Giraffe.tongueL = _Giraffe.fsize * 0.1;
 	_Giraffe.drawPos.set(drawPos_.x , drawPos_.y + fsize_ * 0.2);
 
+	if(_bHaveBox)
+	{
+		_Box.linecolor = colorMgr::GetInstance()->getForeColor();
+		_Box.fillcolor = colorMgr::GetInstance()->getBackColor();
+		_Box.fsize = _Giraffe.fsize * 0.5;
+		_Box.drawPos.set(_Giraffe.drawPos.x - _Box.fsize * 0.17, _Giraffe.drawPos.y - _Box.fsize * 0.8);
+	}
+
+	_Mark.fillcolor = colorMgr::GetInstance()->getForeColor();
 	_Mark.bFill = true;
 	_Mark.flineWidth = 0.0;
-	_Mark.fillcolor.set(0);
 	_Mark.fsize = _Giraffe.fsize * 0.35;
 	_Mark.scaleVec = ofVec2f(0.0);
 	_Mark.drawPos.set(drawPos_.x, drawPos_.y -fsize_ * 0.25 );
@@ -120,6 +129,11 @@ void ElevatorUnit::draw()
 	{
 		drawMgr::GetInstance()->draw(_Mark);
 		drawMgr::GetInstance()->draw(_Giraffe);
+
+		if(_bHaveBox)
+		{
+			drawMgr::GetInstance()->draw(_Box);
+		}
 	}
 
 	drawMgr::GetInstance()->draw(_Elevator);

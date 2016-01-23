@@ -46,6 +46,21 @@
     <ClCompile Include="src\TGiraffe.cpp">
       <Filter>src\TGiraffe</Filter>
     </ClCompile>
+    <ClCompile Include="src\GDrop.cpp">
+      <Filter>src\12Giraffe</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GTraverse.cpp">
+      <Filter>src\12Giraffe</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GMega.cpp">
+      <Filter>src\12Giraffe</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GMario.cpp">
+      <Filter>src\12Giraffe</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GKirby.cpp">
+      <Filter>src\12Giraffe</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -160,6 +175,33 @@
     </ClInclude>
     <ClInclude Include="src\TGiraffe.h">
       <Filter>src\TGiraffe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GDrop.h">
+      <Filter>src\12Giraffe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GTraverse.h">
+      <Filter>src\12Giraffe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GMega.h">
+      <Filter>src\12Giraffe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DEPipe.h">
+      <Filter>src\12Giraffe\DrawElement</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DEFireFlower.h">
+      <Filter>src\12Giraffe\DrawElement</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GMario.h">
+      <Filter>src\12Giraffe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DEBox.h">
+      <Filter>src\12Giraffe\DrawElement</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DEStar.h">
+      <Filter>src\12Giraffe\DrawElement</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GKirby.h">
+      <Filter>src\12Giraffe</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

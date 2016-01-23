@@ -9,8 +9,12 @@
 #include "DELongGiraffe.h"
 #include "DEThreeLevelFirework.h"
 #include "DEElevator.h"
+#include "DEBox.h"
 #include "DEExclamationMark.h"
 #include "DEJetpack.h"
+#include "DEPipe.h"
+#include "DEFireFlower.h"
+#include "DEStar.h"
 
 class drawMgr
 {
@@ -21,7 +25,11 @@ public:
 
 	void draw(stThreeLevelFireworkP& param);
 	void draw(stElevatorP& param);
+	void draw(stBoxP& param);
 	void draw(stJetpackP& param);
+	void draw(stPipeP& param);
+	void draw(stFireFlowerP& param);
+	void draw(stStarP& param);
 
 	void draw(stExclamationMarkP& param);
 //-------------------

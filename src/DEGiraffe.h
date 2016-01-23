@@ -16,7 +16,7 @@ public:
 			ofSetColor(255);
 			outline_.draw();
 
-			ofSetColor(param.linecolor);
+			ofSetColor(param.linecolor, param.falpha);
 			
 			//tongue
 			auto Tstart_ = ofBezierPoint( 
@@ -85,10 +85,10 @@ private:
 	static void CreateOutline(ofPath& path, const stGiraffeP& param)
 	{
 		path.clear();
-		path.setFillColor(param.fillcolor);
+		path.setFillColor(ofColor(param.fillcolor, param.falpha));
 		path.setFilled(param.bFill);
 		path.setStrokeWidth(param.flineWidth);
-		path.setStrokeColor(param.linecolor);
+		path.setStrokeColor(ofColor(param.linecolor, param.falpha));
 		
 		path.moveTo(-0.05 * param.fsize, -0.3 * param.fsize);
 		

@@ -28,12 +28,14 @@ typedef struct _stBasicColorP
 		:flineWidth(2.0)
 		,linecolor(ofColor(0))
 		,fillcolor(ofColor(255))
+		,falpha(255)
 		,bFill(false)
 	{}
 
 	bool bFill;
 	float flineWidth;
 	ofColor	linecolor, fillcolor;
+	float falpha;
 }stBasicColorP;
 
 #pragma region Giraffe
@@ -116,7 +118,18 @@ typedef struct _stElevatorP : public _stBasicP, public stBasicColorP
 }stElevatorP;
 #pragma endregion
 
-#pragma region JetpackP
+#pragma region Box
+typedef struct _stBoxP : public _stBasicP, public stBasicColorP
+{
+	_stBoxP()
+		:stBasicP()
+		,stBasicColorP()
+	{}
+
+}stBoxP;
+#pragma endregion
+
+#pragma region Jetpack
 typedef struct _stJetpackP : public stBasicP, public stBasicColorP
 {
 	_stJetpackP()
@@ -130,6 +143,48 @@ typedef struct _stJetpackP : public stBasicP, public stBasicColorP
 	float fFireLength;
 }stJetpackP;
 #pragma endregion
+
+#pragma region Pipe
+typedef struct _stPipeP: public stBasicP, public stBasicColorP
+{
+	_stPipeP()
+		:stBasicP()
+		,stBasicColorP()
+		,fPipeLength(fsize * 3)
+	{
+	}
+
+	float fPipeLength;
+}stPipeP;
+#pragma endregion
+
+#pragma region Fire Flower
+typedef struct _stFireFlowerP: public stBasicP, public stBasicColorP
+{
+	_stFireFlowerP()
+		:stBasicP()
+		,stBasicColorP()
+		,fFlowerPrec(0.0)
+		,fLeafPrec(0.0)
+	{}
+
+	float fFlowerPrec, fLeafPrec; //0.0~1.0
+}stFireFlowerP;
+#pragma endregion
+
+#pragma region Star
+typedef struct _stStarP : public stBasicP, public stBasicColorP
+{
+	_stStarP()
+		:stBasicP()
+		,stBasicColorP()
+		,InRadiusRate(0.5)
+	{}
+
+	float InRadiusRate; // 0~1
+}stStarP;
+#pragma endregion
+
 
 //-----------------------------------
 

@@ -64,9 +64,7 @@ public:
 
 			float spotBasicSize_ = 0.3 * param.fsize;
 			int spotNum_ = static_cast<int>(param.fneckLength / spotBasicSize_);
-			
-			//float spotLeftLength_ = neckStartLeft_.distance(neckEndLeft_) / spotNum_;
-			//float spotRightLength_ = neckStartRight_.distance(neckEndRight_) / spotNum_;
+
 			float spotLeftLength_, spotRightLength_;
 			spotLeftLength_ = spotRightLength_ = spotBasicSize_;
 

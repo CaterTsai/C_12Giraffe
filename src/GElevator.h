@@ -24,11 +24,13 @@ private:
 	} _eUnitState;
 
 	bool								_bShowGiraffe;
+	const bool					_bHaveBox;
 	float								_fWaitTime;
 	ofxAnimatableFloat	_animElevatorUp, _animElevatorDoor, _animMarkScale;
 	stGiraffeP			_Giraffe;
 	stExclamationMarkP	_Mark;
 	stElevatorP		_Elevator;
+	stBoxP				_Box;
 };
 
 class GElevator : public GBasic<ElevatorUnit>

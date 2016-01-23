@@ -17,7 +17,7 @@ public:
 		
 private:
 	float _fMainTimer;
-	//stGiraffeP	_p;
+	stStarP	_p;
 
 #pragma region Giraffe12
 //--------------------------------------
@@ -35,6 +35,4 @@ private:
 private:
 	TGiraffe	_tGiraffe;
 #pragma endregion
-
-
 };

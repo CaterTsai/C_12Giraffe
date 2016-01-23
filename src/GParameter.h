@@ -7,6 +7,11 @@ enum eGiraffeType
 	,eGiraffe_Enter
 	,eGiraffe_Elevator
 	,eGiraffe_JetPack
+	,eGiraffe_Drop
+	,eGiraffe_Traverse
+	,eGiraffe_Mega
+	,eGiraffe_Mario
+	,eGiraffe_Kirby
 	,eGiraffeNum
 };
 

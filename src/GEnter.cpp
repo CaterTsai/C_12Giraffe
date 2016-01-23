@@ -14,6 +14,7 @@ EnterUnit::EnterUnit(float fduration, int iside)
 	_Giraffe.fdegree = iside * 90;
 	_Giraffe.fswingDegree = 0;
 	_fWaitTimer = 0.3 * fduration;
+
 	switch(iside)
 	{
 	case 0:

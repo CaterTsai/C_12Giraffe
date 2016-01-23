@@ -31,9 +31,33 @@ void drawMgr::draw(stElevatorP& param)
 }
 
 //--------------------------------------------------------------
+void drawMgr::draw(stBoxP& param)
+{
+	DEBox::draw(param);
+}
+
+//--------------------------------------------------------------
 void drawMgr::draw(stJetpackP& param)
 {
 	DEJetpack::draw(param);
+}
+
+//--------------------------------------------------------------
+void drawMgr::draw(stPipeP& param)
+{
+	DEPipe::draw(param);
+}
+
+//--------------------------------------------------------------
+void drawMgr::draw(stFireFlowerP& param)
+{
+	DEFireFlower::draw(param);
+}
+
+//--------------------------------------------------------------
+void drawMgr::draw(stStarP& param)
+{
+	DEStar::draw(param);
 }
 
 //--------------------------------------------------------------
