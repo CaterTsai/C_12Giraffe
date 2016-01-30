@@ -14,8 +14,10 @@ typedef struct _stBasicP
 		,offsetPos(0, 0)
 		,rotateAxis(drawPos)
 		,scaleVec(1, 1)
+		,bflip(false)
 	{}
 
+	bool bflip;
 	float fsize, fdegree;
 	ofVec2f drawPos, offsetPos;
 	ofVec2f rotateAxis, scaleVec;
@@ -74,6 +76,18 @@ typedef struct _stLongGiraffeP : public stGiraffeP
 	{}
 	float fneckLength;
 }stLongGiraffeP;
+
+//-----------------------------------
+//Open Giraffe
+typedef struct _stOpenGiraffeP : public stGiraffeP
+{
+	_stOpenGiraffeP()
+		:stGiraffeP()
+		,openPerc(0.0)
+	{}
+
+	float openPerc; // 0~1
+}stOpenGiraffeP;
 #pragma endregion
 
 //----------------------------------
@@ -191,13 +205,49 @@ typedef struct _stCactusP : public stBasicP, public stBasicColorP
 	_stCactusP()
 		:stBasicP()
 		,stBasicColorP()
-		,bLeftHandUp(true)
 	{};
 
-	bool bLeftHandUp;
 }stCactusP;
 #pragma endregion
 
+#pragma region PokeBall
+typedef struct _stPokeBallP : public stBasicP, public stBasicColorP
+{
+	_stPokeBallP()
+		:stBasicP()
+		,stBasicColorP()
+		,openPerc(0.0)
+	{};
+
+	float openPerc; //0~1
+}stPokeBallP;
+#pragma endregion
+
+#pragma region PAC-Man
+typedef struct _stPACManP : public stBasicP, public stBasicColorP
+{
+	_stPACManP()
+		:stBasicP()
+		,stBasicColorP()
+		,mouthPerc()
+	{};
+
+	float mouthPerc; //0~1
+}stPACManP;
+#pragma endregion
+
+#pragma region Ghost
+typedef struct _stGhostP : public stBasicP, public stBasicColorP
+{
+	_stGhostP()
+		:stBasicP()
+		,stBasicColorP()
+		,scared(false)
+	{};
+
+	bool scared;
+}stGhostP;
+#pragma endregion
 
 //-----------------------------------
 

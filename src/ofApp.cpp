@@ -7,7 +7,7 @@ void ofApp::setup()
 	ofEnableSmoothing();
 	ofSetCircleResolution(30);
 	ofBackground(255);
-
+	
 	colorMgr::GetInstance();
 	drawMgr::GetInstance();
 
@@ -16,7 +16,8 @@ void ofApp::setup()
 
 	//Debug
 	_p.drawPos.set(ofGetWidth()/2, ofGetHeight()/2);
-
+	_p.fdegree = 90;
+	_p.bflip = true;
 	_fMainTimer = ofGetElapsedTimef();
 }
 
@@ -52,10 +53,10 @@ void ofApp::draw()
 	_tGiraffe.draw();
 
 	//Debug
-	drawMgr::GetInstance()->draw(_p);
-	ofSetColor(255, 0, 0);
-	ofLine(ofVec2f(0, ofGetHeight()/2), ofVec2f(ofGetWidth(), ofGetHeight()/2));
-	ofLine(ofVec2f(ofGetWidth()/2, 0), ofVec2f(ofGetWidth()/2, ofGetHeight()));
+	//drawMgr::GetInstance()->draw(_p);
+	//ofSetColor(255, 0, 0);
+	//ofLine(ofVec2f(0, ofGetHeight()/2), ofVec2f(ofGetWidth(), ofGetHeight()/2));
+	//ofLine(ofVec2f(ofGetWidth()/2, 0), ofVec2f(ofGetWidth()/2, ofGetHeight()));
 }
 
 //--------------------------------------------------------------
@@ -115,6 +116,21 @@ void ofApp::keyPressed(int key)
 			_GMap[NAME_MGR::G_KIRBY]->add(0, 0);
 		}
 		break;
+	case 'p':
+		{
+			_GMap[NAME_MGR::G_CACTUS]->add(0, 0);
+		}
+		break;
+	case '[':
+		{
+			_GMap[NAME_MGR::G_POKEMON]->add(0, 0);
+		}
+		break;
+	case ']':
+		{
+			_GMap[NAME_MGR::G_PACMAN]->add(0, 0);
+		}
+		break;
 	case '1':
 		{
 			if(!_tGiraffe.isTransform())
@@ -162,6 +178,15 @@ void ofApp::initialGiraffe()
 
 	auto pKirby_ = ofPtr<GKirby>(new GKirby(1.5));
 	_GMap.insert(make_pair(NAME_MGR::G_KIRBY, pKirby_));
+
+	auto pCactus_ = ofPtr<GCactus>(new GCactus(1.5));
+	_GMap.insert(make_pair(NAME_MGR::G_CACTUS, pCactus_));
+
+	auto pPokemon_ = ofPtr<GPokemon>(new GPokemon(1.5));
+	_GMap.insert(make_pair(NAME_MGR::G_POKEMON, pPokemon_));
+
+	auto pPACMan_ = ofPtr<GPACMan>(new GPACMan(3.0));
+	_GMap.insert(make_pair(NAME_MGR::G_PACMAN, pPACMan_));
 }
 
 //--------------------------------------------------------------

@@ -7,6 +7,7 @@
 #include "DEGiraffe.h"
 #include "DESwingGiraffe.h"
 #include "DELongGiraffe.h"
+#include "DEOpenGiraffe.h"
 #include "DEThreeLevelFirework.h"
 #include "DEElevator.h"
 #include "DEBox.h"
@@ -16,6 +17,9 @@
 #include "DEFireFlower.h"
 #include "DEStar.h"
 #include "DECactus.h"
+#include "DEPokeBall.h"
+#include "DEPACMan.h"
+#include "DEGhost.h"
 
 class drawMgr
 {
@@ -23,6 +27,7 @@ public:
 	void draw(stGiraffeP& param);
 	void draw(stSwingGiraffeP& param);
 	void draw(stLongGiraffeP& param);
+	void draw(stOpenGiraffeP& param);
 
 	void draw(stThreeLevelFireworkP& param);
 	void draw(stElevatorP& param);
@@ -32,6 +37,9 @@ public:
 	void draw(stFireFlowerP& param);
 	void draw(stStarP& param);
 	void draw(stCactusP& param);
+	void draw(stPokeBallP& param);
+	void draw(stPACManP& param);
+	void draw(stGhostP& param);
 
 	void draw(stExclamationMarkP& param);
 //-------------------

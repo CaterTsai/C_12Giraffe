@@ -19,6 +19,12 @@ void drawMgr::draw(stLongGiraffeP& param)
 }
 
 //--------------------------------------------------------------
+void drawMgr::draw(stOpenGiraffeP& param)
+{
+	DEOpenGiraffe::draw(param);
+}
+
+//--------------------------------------------------------------
 void drawMgr::draw(stThreeLevelFireworkP& param)
 {
 	DEThreeLevelFirework::draw(param);
@@ -67,12 +73,28 @@ void drawMgr::draw(stCactusP& param)
 }
 
 //--------------------------------------------------------------
+void drawMgr::draw(stPokeBallP& param)
+{
+	DEPokeBall::draw(param);
+}
+
+//--------------------------------------------------------------
+void drawMgr::draw(stPACManP& param)
+{
+	DEPACMan::draw(param);
+}
+
+//--------------------------------------------------------------
+void drawMgr::draw(stGhostP& param)
+{
+	DEGhost::draw(param);
+}
+
+//--------------------------------------------------------------
 void drawMgr::draw(stExclamationMarkP& param)
 {
 	DEExclamation::draw(param);
 }
-
-
 
 #pragma region Singleton
 //--------------------------------------------------------------

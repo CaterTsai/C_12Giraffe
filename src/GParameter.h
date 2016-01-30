@@ -12,6 +12,9 @@ enum eGiraffeType
 	,eGiraffe_Mega
 	,eGiraffe_Mario
 	,eGiraffe_Kirby
+	,eGiraffe_Cactus
+	,eGiraffe_Pokemon
+	,eGiraffe_PACMan
 	,eGiraffeNum
 };
 

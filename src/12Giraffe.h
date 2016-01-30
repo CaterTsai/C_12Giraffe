@@ -10,4 +10,7 @@
 #include "GMega.h"
 #include "GMario.h"
 #include "GKirby.h"
+#include "GCactus.h"
+#include "GPokemon.h"
+#include "GPACMan.h"
 #endif // !CT_12GIRAFFE

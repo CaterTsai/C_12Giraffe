@@ -61,6 +61,15 @@
     <ClCompile Include="src\GKirby.cpp">
       <Filter>src\12Giraffe</Filter>
     </ClCompile>
+    <ClCompile Include="src\GCactus.cpp">
+      <Filter>src\12Giraffe</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GPokemon.cpp">
+      <Filter>src\12Giraffe</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GPACMan.cpp">
+      <Filter>src\12Giraffe</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -205,6 +214,27 @@
     </ClInclude>
     <ClInclude Include="src\DECactus.h">
       <Filter>src\12Giraffe\DrawElement</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GCactus.h">
+      <Filter>src\12Giraffe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DEPokeBall.h">
+      <Filter>src\12Giraffe\DrawElement</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GPokemon.h">
+      <Filter>src\12Giraffe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DEOpenGiraffe.h">
+      <Filter>src\12Giraffe\DrawElement</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DEPACMan.h">
+      <Filter>src\12Giraffe\DrawElement</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DEGhost.h">
+      <Filter>src\12Giraffe\DrawElement</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GPACMan.h">
+      <Filter>src\12Giraffe</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
